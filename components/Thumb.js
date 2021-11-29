@@ -1,8 +1,11 @@
 import { ThumbUpIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
+import ref from 'react' 
 
-const  Thumb = ({result} , ref) => {
+const  Thumb = ({result}  ) => {
+    
     const BASE_URL = process.env.BASE_URL || "https://image.tmdb.org/t/p/original"
+     
 
     const shimmer = (w, h) => `
     <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -26,7 +29,7 @@ const  Thumb = ({result} , ref) => {
 
 
      return (
-        <div ref={ref} className="group cursor-pointer p-2 transition  
+        <div  className="group cursor-pointer p-2 transition  
         ease-in sm:hover:filter sm:hover:duration-300 hover:z-50 sm:hover:grayscale ">
             <Image
                 layout="responsive"
